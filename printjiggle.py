@@ -73,7 +73,7 @@ for item in namelist:
 
 
 for v in armaturebones:
-    print("$jigglebone " + "'" + v + "'")
+    print("$jigglebone " + '"' + v + '"')
     print("{")
     print("    is_flexible")
     print("    {")
