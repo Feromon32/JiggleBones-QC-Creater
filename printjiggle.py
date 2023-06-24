@@ -1,8 +1,6 @@
 import bpy
-import bpy.ops
 
-context = bpy.context
-obj = context.object
+obj = bpy.context.object
 
 namelist = [
     "ValveBiped.Bip01_Pelvis",
@@ -60,40 +58,26 @@ namelist = [
     "ValveBiped.Bip01_R_Finger42"
 ]
 
-ob = bpy.context.object
-armaturebones = []
-if ob.type == 'ARMATURE':
-    armature = ob.data
-
-    for bone in armature.bones:
-        armaturebones.append(bone.name)
-
-for item in namelist:
-    if item in armaturebones:
-        armaturebones.remove(item)
-
-output_strings = []
-
-for v in armaturebones:
-    output_strings.append("$jigglebone " + '"' + v + '"')
-    output_strings.append("{")
-    output_strings.append("    is_flexible")
-    output_strings.append("    {")
-    output_strings.append("        length 10")
-    output_strings.append("        tip_mass 10")
-    output_strings.append("        pitch_stiffness 40")
-    output_strings.append("        pitch_constraint -70 0")
-    output_strings.append("        pitch_damping 6")
-    output_strings.append("        yaw_stiffness 75")
-    output_strings.append("        yaw_damping 6")
-    output_strings.append("        along_stiffness 100")
-    output_strings.append("        along_damping 0")
-    output_strings.append("        angle_constraint 10")
-    output_strings.append("    }")
-    output_strings.append("}")
-
-output_text = '\n'.join(output_strings)
+armaturebones = [bone.name for bone in obj.data.bones if bone.name not in namelist]
+output_text = '\n'.join([
+    f'$jigglebone "{bone}"\n'
+    '{\n'
+    '    is_flexible\n'
+    '    {\n'
+    '        length 10\n'
+    '        tip_mass 10\n'
+    '        pitch_stiffness 40\n'
+    '        pitch_constraint -70 0\n'
+    '        pitch_damping 6\n'
+    '        yaw_stiffness 75\n'
+    '        yaw_damping 6\n'
+    '        along_stiffness 100\n'
+    '        along_damping 0\n'
+    '        angle_constraint 10\n'
+    '    }\n'
+    '}'
+    for bone in armaturebones
+])
 
 bpy.context.window_manager.clipboard = output_text
-
-print("Done, press on your qc 'Ctrl + v'")
+print("Done, press 'Ctrl + V' in your qc file.")
