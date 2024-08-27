@@ -48,7 +48,7 @@ $jigglebone "your_bone_name"
 ```
 ![1kVzv00](https://github.com/user-attachments/assets/b2c8ce00-38f6-4a9c-9107-81f355665503)
 
-Jiggles for Coats
+## Jiggles for Coats
 ```plaintext
 $jigglebone "your_bone_name"
 {
@@ -115,7 +115,7 @@ $jigglebone "your_bone_name4"
 ```
 ![DTL4ev1](https://github.com/user-attachments/assets/9013a9b3-3889-4e95-828b-76bb8cd53087)
 
-Jiggles for Breast
+## Jiggles for Breast
 ```plaintext
 $jigglebone "your_bone_name"
 {
@@ -135,8 +135,8 @@ $jigglebone "your_bone_name"
 ```
 ![Jg6d6d4](https://github.com/user-attachments/assets/436d85d9-f4c1-43cc-b56a-cd7e94a99489)
 
-Jiggles for Items
-From Cuba Jigglebone Attachments
+## Jiggles for Items
+(From Cuba Jigglebone Attachments)
 
 ```plaintext
 $jigglebone "your_bone_name"
@@ -158,7 +158,7 @@ $jigglebone "your_bone_name"
 ![6krw6o0](https://github.com/user-attachments/assets/9f1d1fc2-7f89-4eab-bd53-f4274500e4c0)
 
 
-Jiggles for Long Ponytails
+## Jiggles for Long Ponytails
 ```plaintext
 $jigglebone "your_bone_name"
 {
