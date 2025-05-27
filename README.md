@@ -1,3 +1,5 @@
+ALL JIGGLE BONE MUST BE WATCHED IN -Z COORDINATES FOR PROPER PHYSICS IN THE GAME
+
 # JiggleBones-QC-Creater
 Simple script that copies all jiggleBones to your clipboard.
 
